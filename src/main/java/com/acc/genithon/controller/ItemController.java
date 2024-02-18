@@ -17,8 +17,8 @@ public class ItemController {
         return service.saveItem(item);
     }
 
-    @GetMapping("/{name}")
-    public Item getItem(@PathVariable("name") String name) {
+    @GetMapping
+    public Item getItem(@RequestParam("name") String name) {
         return service.getItem(name);
     }
 }
